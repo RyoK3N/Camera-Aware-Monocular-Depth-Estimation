@@ -2,27 +2,20 @@
 
 Complete implementation of monocular depth estimation with camera intrinsics integration, reprojection error loss, and TensorBoard monitoring.
 
-## 🎯 Overview
+## Overview
 
 This project implements camera-aware neural networks for monocular depth estimation using the **SUN RGB-D dataset** (10,335 images). The system includes state-of-the-art loss functions based on 2024-2025 research, comprehensive TensorBoard monitoring, and optimized configurations for both production GPUs and Mac M4 Pro.
 
 ### Key Features
 
-#### **Reprojection Error Loss** (NEW - Based on 2024-2025 research)
-
-#### **Scale-Invariant Loss** (Eigen et al., NeurIPS 2014)
-
-#### **Gradient Matching Loss** (MiDaS, Ranftl et al., 2020)
-
-#### **Edge-Aware Smoothness** (Monodepth, Godard et al., 2017)
-
-#### **State-of-the-Art TensorBoard Integration** (
-
-#### **Camera Intrinsics Integration** (Full 3×3 matrix support)
-
-#### **Mac M4 Pro Optimized** (MPS backend, 24GB unified memory)
-
-#### **Production GPU Optimized** (CUDA backend, batch size 32)
+- #### **Reprojection Error Loss** (NEW - Based on 2024-2025 research)
+- #### **Scale-Invariant Loss** (Eigen et al., NeurIPS 2014)
+- #### **Gradient Matching Loss** (MiDaS, Ranftl et al., 2020)
+- #### **Edge-Aware Smoothness** (Monodepth, Godard et al., 2017)
+- #### **State-of-the-Art TensorBoard Integration** (
+- #### **Camera Intrinsics Integration** (Full 3×3 matrix support)
+- #### **Mac M4 Pro Optimized** (MPS backend, 24GB unified memory)
+- #### **Production GPU Optimized** (CUDA backend, batch size 32)
 
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
 ![LibTorch](https://img.shields.io/badge/LibTorch-2.0-red)
@@ -37,38 +30,38 @@ This project implements camera-aware neural networks for monocular depth estimat
 
 Our enhanced TensorBoard integration provides **research-grade visualizations** with proper event file writing:
 
-🎯 **Real-Time Monitoring**
+**Real-Time Monitoring**
 - Training/validation loss curves with smooth updates
 - Loss component breakdown (SI, Gradient, Smoothness, Reprojection)
 - Learning rate schedules
 - Batch-level granularity
 
-📊 **Comprehensive Metrics**
+**Comprehensive Metrics**
 - Absolute relative error (abs_rel)
 - RMSE and RMSE-log
 - Threshold accuracies (δ<1.25, δ<1.5625, δ<1.953125)
 - All metrics tracked per epoch
 
-🖼️ **Visual Analysis**
+**Visual Analysis**
 - RGB input images
 - Ground truth depth maps
 - Predicted depth maps
 - Color-coded error visualizations
 - Side-by-side comparisons
 
-📈 **Model Interpretability**
+**Model Interpretability**
 - Weight distributions (histograms for all layers)
 - Gradient flow analysis (norms, max, min values)
 - Activation statistics
 - Gradient clipping monitoring
 
-⚙️ **Hyperparameter Tracking**
+**Hyperparameter Tracking**
 - Experiment configuration logging
 - Hyperparameter comparison across runs
 - Model architecture visualization
 - Training configuration as text
 
-🎯 **Custom Scalar Layouts**
+**Custom Scalar Layouts**
 - Organized multi-panel views
 - Training metrics panel
 - Loss components panel
@@ -77,7 +70,7 @@ Our enhanced TensorBoard integration provides **research-grade visualizations** 
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### **Mac M4 Pro (One Command)**
 
@@ -92,11 +85,11 @@ pip install "protobuf<4" --force-reinstall
 ```
 
 **What this does:**
-1. ✅ Validates build (builds if needed)
-2. ✅ Opens TensorBoard in new terminal
-3. ✅ Opens browser to http://localhost:6006
-4. ✅ Starts training with MPS backend
-5. ✅ Optional live log monitor
+1. Validates build (builds if needed)
+2. Opens TensorBoard in new terminal
+3. Opens browser to http://localhost:6006
+4. Starts training with MPS backend
+5. Optional live log monitor
 
 ### **Production GPU (NVIDIA)**
 
@@ -124,7 +117,7 @@ tensorboard --logdir=./runs --port=6006
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -182,7 +175,6 @@ cmake -DCMAKE_PREFIX_PATH=/path/to/libtorch ..
 make train -j8
 ```
 
-<<<<<<< HEAD
 ## Getting Started
 #### 1. Download SUN RGB-D Dataset
 
@@ -207,7 +199,6 @@ The script provides three download methods:
 #### 2. Validate Dataset
 =======
 ### 5. Download & Validate Dataset
->>>>>>> 7392029 ( Tensorboard Fixes)
 
 ```bash
 # Download SUN RGB-D dataset (manual download required)
@@ -221,7 +212,6 @@ The script provides three download methods:
 # Expected: "Valid images: 10335/10335"
 ```
 
-<<<<<<< HEAD
 This will:
 - Validate all 10,335 RGB-D images
 - Check file completeness across 4 sensor types
@@ -394,7 +384,7 @@ This project is for research purposes only.
 =======
 ---
 
-## 🔧 TensorBoard Setup (IMPORTANT)
+## TensorBoard Setup (IMPORTANT)
 
 ### Fix Protobuf Compatibility Issue
 
@@ -425,7 +415,7 @@ tensorboard --logdir=./runs --port=6006
 
 ---
 
-## 🎯 Training Configurations
+## Training Configurations
 
 ### Mac M4 Pro Configuration
 
@@ -463,7 +453,7 @@ tensorboard --logdir=./runs --port=6006
 
 ---
 
-## 📊 Loss Functions
+## Loss Functions
 
 ### Combined Loss Formula
 
@@ -493,13 +483,13 @@ Total Loss = 1.0 * L_si + 0.1 * L_grad + 0.001 * L_smooth + 0.01 * L_reproj
 
 ---
 
-## 📈 TensorBoard Monitoring (Enhanced)
+## TensorBoard Monitoring (Enhanced)
 
 ### What You'll See in TensorBoard
 
 Our enhanced TensorBoard integration writes **proper event files** for full TensorBoard functionality:
 
-#### **📊 SCALARS Tab** - Real-Time Plots
+#### **SCALARS Tab** - Real-Time Plots
 
 **Training Progress:**
 - `loss/train` - Training loss (per epoch)
@@ -530,7 +520,7 @@ Our enhanced TensorBoard integration writes **proper event files** for full Tens
 - `gradients/max` - Maximum gradient value
 - `gradients/min` - Minimum gradient value
 
-#### **🖼️ IMAGES Tab** - Visual Results
+#### **IMAGES Tab** - Visual Results
 
 **Prediction Visualizations** (Updated every epoch):
 - `predictions/sample_0` through `predictions/sample_7`
@@ -552,7 +542,7 @@ Our enhanced TensorBoard integration writes **proper event files** for full Tens
 - Identifies vanishing or exploding gradients
 - Helps diagnose training instabilities
 
-#### **📝 TEXT Tab** - Experiment Documentation
+#### **TEXT Tab** - Experiment Documentation
 
 **Model Architecture:**
 - Total parameters count
@@ -564,7 +554,7 @@ Our enhanced TensorBoard integration writes **proper event files** for full Tens
 - Loss weights (SI, Grad, Smooth, Reproj)
 - Number of epochs, gradient clipping
 
-#### **🎯 HPARAMS Tab** - Experiment Comparison
+#### ** HPARAMS Tab** - Experiment Comparison
 
 Compare multiple training runs by hyperparameters:
 - Learning rate vs final loss
@@ -593,16 +583,16 @@ Compare multiple training runs by hyperparameters:
 
 ### TensorBoard Tips
 
-🔄 **Auto-Refresh**: TensorBoard updates every 30 seconds automatically
-📌 **Pin Charts**: Click pushpin icon to keep important charts visible
-📊 **Smoothing**: Adjust smoothing slider (default 0.6) to reduce noise
-⚙️ **Settings**: Gear icon for chart options, axis scales, and display preferences
-🔍 **Zoom**: Click and drag on charts to zoom into specific training regions
-📥 **Download Data**: Download button to export charts as SVG or data as CSV
+ **Auto-Refresh**: TensorBoard updates every 30 seconds automatically
+ **Pin Charts**: Click pushpin icon to keep important charts visible
+ **Smoothing**: Adjust smoothing slider (default 0.6) to reduce noise
+ **Settings**: Gear icon for chart options, axis scales, and display preferences
+ **Zoom**: Click and drag on charts to zoom into specific training regions
+ **Download Data**: Download button to export charts as SVG or data as CSV
 
 ---
 
-## 🛠️ Available Scripts
+##  Available Scripts
 
 ### Training Scripts
 
@@ -644,7 +634,7 @@ python scripts/monitor_training.py --dashboard --refresh 5
 
 ---
 
-## 📏 Validation Metrics
+##  Validation Metrics
 
 | Metric | Formula | Best Value | Typical Good Value |
 |--------|---------|------------|-------------------|
@@ -654,7 +644,7 @@ python scripts/monitor_training.py --dashboard --refresh 5
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### TensorBoard Errors
 
@@ -715,7 +705,7 @@ training:
 
 ---
 
-## 📚 Project Structure
+## Project Structure
 
 ```
 Camera Matrix/
@@ -757,7 +747,7 @@ Camera Matrix/
 
 ---
 
-## 🔬 Research References
+## Research References
 
 ### Papers Implemented
 
@@ -771,7 +761,7 @@ Camera Matrix/
 
 ---
 
-## 🎓 Performance Benchmarks
+## Performance Benchmarks
 
 ### Hardware Comparison
 
@@ -792,13 +782,13 @@ Camera Matrix/
 
 ---
 
-## 📄 License
+## License
 
 This project is for research and educational purposes.
 
 ---
 
-## 🆘 Support
+## Support
 
 - **Scripts Documentation**: `scripts/README.md`
 - **TensorBoard Issues**: Run `./scripts/fix_protobuf.sh`
@@ -807,7 +797,7 @@ This project is for research and educational purposes.
 
 ---
 
-## 🎯 Quick Command Reference
+## Quick Command Reference
 
 ```bash
 # Fix TensorBoard
