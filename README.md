@@ -17,16 +17,17 @@ This project implements camera-aware neural networks for monocular depth estimat
 - #### **Mac M4 Pro Optimized** (MPS backend, 24GB unified memory)
 - #### **Production GPU Optimized** (CUDA backend, batch size 32)
 
-![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
-![LibTorch](https://img.shields.io/badge/LibTorch-2.0-red)
-![TensorBoard](https://img.shields.io/badge/TensorBoard-Enabled-orange)
-![CUDA](https://img.shields.io/badge/CUDA-Supported-green)
-![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-M4%20Pro-black)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-blue)
-![License](https://img.shields.io/badge/License-Research-lightgrey)
-![Status](https://img.shields.io/badge/Status-Active-success)
+        
+        ![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
+        ![LibTorch](https://img.shields.io/badge/LibTorch-2.0-red)
+        ![TensorBoard](https://img.shields.io/badge/TensorBoard-Enabled-orange)
+        ![CUDA](https://img.shields.io/badge/CUDA-Supported-green)
+        ![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-M4%20Pro-black)
+        ![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-blue)
+        ![License](https://img.shields.io/badge/License-Research-lightgrey)
+        ![Status](https://img.shields.io/badge/Status-Active-success)
 
-### 🔬 Advanced TensorBoard Visualizations (NEW)
+### Advanced TensorBoard Visualizations (NEW)
 
 Our enhanced TensorBoard integration provides **research-grade visualizations** with proper event file writing:
 
