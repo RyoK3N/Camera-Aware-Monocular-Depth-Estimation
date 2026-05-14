@@ -8,14 +8,30 @@ This project implements camera-aware neural networks for monocular depth estimat
 
 ### Key Features
 
-✅ **Reprojection Error Loss** (NEW - Based on 2024-2025 research)
-✅ **Scale-Invariant Loss** (Eigen et al., NeurIPS 2014)
-✅ **Gradient Matching Loss** (MiDaS, Ranftl et al., 2020)
-✅ **Edge-Aware Smoothness** (Monodepth, Godard et al., 2017)
-✅ **State-of-the-Art TensorBoard Integration** (FANG-Grade Engineering)
-✅ **Camera Intrinsics Integration** (Full 3×3 matrix support)
-✅ **Mac M4 Pro Optimized** (MPS backend, 24GB unified memory)
-✅ **Production GPU Optimized** (CUDA backend, batch size 32)
+#### **Reprojection Error Loss** (NEW - Based on 2024-2025 research)
+
+#### **Scale-Invariant Loss** (Eigen et al., NeurIPS 2014)
+
+#### **Gradient Matching Loss** (MiDaS, Ranftl et al., 2020)
+
+#### **Edge-Aware Smoothness** (Monodepth, Godard et al., 2017)
+
+#### **State-of-the-Art TensorBoard Integration** (
+
+#### **Camera Intrinsics Integration** (Full 3×3 matrix support)
+
+#### **Mac M4 Pro Optimized** (MPS backend, 24GB unified memory)
+
+#### **Production GPU Optimized** (CUDA backend, batch size 32)
+
+![C++17](https://img.shields.io/badge/C%2B%2B-17-blue)
+![LibTorch](https://img.shields.io/badge/LibTorch-2.0-red)
+![TensorBoard](https://img.shields.io/badge/TensorBoard-Enabled-orange)
+![CUDA](https://img.shields.io/badge/CUDA-Supported-green)
+![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-M4%20Pro-black)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-blue)
+![License](https://img.shields.io/badge/License-Research-lightgrey)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
 ### 🔬 Advanced TensorBoard Visualizations (NEW)
 
