@@ -816,11 +816,4 @@ tensorboard --logdir=./runs --port=6006
 cd build && cmake .. && make train -j8
 ```
 
----
 
-**Version**: 2.0.0
-**Last Updated**: 2025-01-23
-**Maintainer**: Camera-Aware Depth Estimation Team
-
-🚀 **Ready to train! Start with:** `./scripts/quick_train_m4pro.sh`
->>>>>>> 7392029 ( Tensorboard Fixes)
